@@ -1,6 +1,6 @@
 "use client";
 
-// import PaymentForm from "@/components/PaymentForm";
+import PaymentForm from "@/components/PaymentForm";
 import ShippingForm from "@/components/ShippingForm";
 // import useCartStore from "@/stores/cartStore";
 import { CartItemsType, ShippingFormInputs } from "@/types";
@@ -170,8 +170,8 @@ const CartPage = () => {
             ))
           ) : activeStep === 2 ? (
             <ShippingForm setShippingForm={setShippingForm} />
-        //   ) : activeStep === 3 && shippingForm ? (
-        //     <PaymentForm />
+          ) : activeStep === 3 && shippingForm ? (
+            <PaymentForm />
           ) : (
             <p className="text-sm text-gray-500">
               Please fill in the shipping form to continue.
