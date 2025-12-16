@@ -1,6 +1,6 @@
-# Ecom Micro UI - STEEZY Clothing Store
+# STEEZY Clothing Store
 
-A modern, modular e-commerce micro frontend built with **Next.js 15**, **React 19**, and **TypeScript**. This project provides reusable UI components and features for building scalable e-commerce applications.
+A modern, modular e-commerce frontend built with **Next.js 15**, **React 19**, and **TypeScript**. This project provides reusable UI components and features for building scalable e-commerce applications.
 
 ## Features
 
