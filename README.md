@@ -123,18 +123,6 @@ Centralized cart state management with Zustand for managing shopping cart items 
 ### Form Validation
 Forms use React Hook Form with Zod for runtime validation and TypeScript inference.
 
-## Deployment
-
-### Deploy on Vercel
-
-The easiest way to deploy is using the [Vercel Platform](https://vercel.com):
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Vercel will automatically detect Next.js and deploy
-
-[Learn more about Vercel deployment](https://nextjs.org/docs/app/building-your-application/deploying)
-
 ## Resources
 
 - [Next.js Documentation](https://nextjs.org/docs)
