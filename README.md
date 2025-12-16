@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ecom Micro UI
+
+A modern, modular e-commerce micro frontend built with **Next.js 15**, **React 19**, and **TypeScript**. This project provides reusable UI components and features for building scalable e-commerce applications.
+
+## Features
+
+- 🛒 **Shopping Cart Management** - Persistent cart state using Zustand
+- 📦 **Product Catalog** - Browse and filter products by category
+- 🔍 **Product Search** - Full-text search functionality
+- 💳 **Checkout Flow** - Shipping and payment form components
+- 📱 **Responsive Design** - Mobile-first UI with Tailwind CSS
+- ⚡ **Performance Optimized** - Next.js with Turbopack for fast development
+- ✅ **Form Validation** - React Hook Form with Zod schema validation
+- 🎨 **Component Library** - Reusable, well-structured components
+
+## Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org) with App Router
+- **Language**: [TypeScript](https://www.typescriptlang.org)
+- **UI Library**: [React 19](https://react.dev)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com)
+- **State Management**: [Zustand](https://zustand-demo.vercel.app)
+- **Form Handling**: [React Hook Form](https://react-hook-form.com)
+- **Validation**: [Zod](https://zod.dev)
+- **Icons**: [Lucide React](https://lucide.dev)
+- **Notifications**: [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
+- **Linting**: [ESLint](https://eslint.org)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.17+
+- pnpm (or npm/yarn/bun)
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd ecom-micro-ui
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+pnpm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+The app will auto-reload as you edit files.
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/                      # Next.js App Router pages
+│   ├── layout.tsx           # Root layout
+│   ├── page.tsx             # Home page
+│   ├── cart/
+│   │   └── page.tsx         # Shopping cart page
+│   ├── products/
+│   │   ├── page.tsx         # Product listing page
+│   │   └── [id]/
+│   │       └── page.tsx     # Product detail page
+│   └── globals.css          # Global styles
+├── components/               # Reusable UI components
+│   ├── Categories.tsx       # Product category filter
+│   ├── Filter.tsx           # Product filters
+│   ├── ProductCard.tsx      # Product display card
+│   ├── ProductList.tsx      # Product list container
+│   ├── ProductInteraction.tsx
+│   ├── SearchBar.tsx        # Search functionality
+│   ├── ShoppingCartIcon.tsx # Cart icon with badge
+│   ├── Navbar.tsx           # Navigation bar
+│   ├── Footer.tsx           # Footer component
+│   ├── ShippingForm.tsx     # Shipping form
+│   └── PaymentForm.tsx      # Payment form
+├── stores/                   # Zustand store configurations
+│   └── cartStore.ts         # Cart state management
+└── types.ts                 # TypeScript type definitions
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Available Scripts
 
-## Deploy on Vercel
+- `pnpm dev` - Start development server with Turbopack
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm lint` - Run ESLint
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Key Components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### CartStore
+Centralized cart state management with Zustand for managing shopping cart items and operations.
+
+### Product Components
+- **ProductCard** - Individual product display
+- **ProductList** - Grid/list of products
+- **Filter** - Product filtering options
+- **Categories** - Category navigation
+
+### Forms
+- **ShippingForm** - Collect shipping information with validation
+- **PaymentForm** - Handle payment details
+
+### Navigation
+- **Navbar** - Top navigation with search
+- **SearchBar** - Product search functionality
+- **ShoppingCartIcon** - Cart access with item count badge
+
+## Development
+
+### Code Style
+- TypeScript for type safety
+- ESLint configuration for code consistency
+- Component-based architecture
+
+### Form Validation
+Forms use React Hook Form with Zod for runtime validation and TypeScript inference.
+
+## Deployment
+
+### Deploy on Vercel
+
+The easiest way to deploy is using the [Vercel Platform](https://vercel.com):
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Vercel will automatically detect Next.js and deploy
+
+[Learn more about Vercel deployment](https://nextjs.org/docs/app/building-your-application/deploying)
+
+## Resources
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [React Documentation](https://react.dev)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs)
+- [Zustand Documentation](https://github.com/pmndrs/zustand)
+
+## License
+
+MIT
