@@ -33,7 +33,7 @@ const PaymentForm = () => {
           className="border-b border-gray-200 py-2 outline-none text-sm"
           type="text"
           id="cardHolder"
-          placeholder="John Doe"
+          placeholder="Tong Long Dev"
           {...register("cardHolder")}
         />
         {errors.cardHolder && (
